@@ -69,10 +69,12 @@ html, body {
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.device-btn img {
-  width: 110 px;
+..device-btn img {
+  max-width: 100px;
   height: auto;
+  object-fit: contain;
 }
+
 
 .device-btn:hover {
   transform: scale(1.08);
