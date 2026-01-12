@@ -1,18 +1,17 @@
-/* Reset and fullscreen */
+/* Reset */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   font-family: 'Segoe UI', sans-serif;
-  overflow: hidden;
   background: #0f0f0f;
   color: white;
+  overflow: hidden;
 }
 
-/* Animated background */
-.animated-bg,
-.background { /* support either class name */
+/* Background animation */
+.background {
   position: fixed;
   top: 0;
   left: 0;
@@ -30,7 +29,7 @@ html, body {
   100% { background-position: 0% 50%; }
 }
 
-/* Center container */
+/* Center content */
 .device-container {
   height: 100%;
   display: flex;
@@ -38,12 +37,11 @@ html, body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  z-index: 1;
 }
 
 .device-container h1 {
   font-size: 2.6rem;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 /* Button layout */
@@ -54,17 +52,17 @@ html, body {
   justify-content: center;
 }
 
-/* Device buttons – made bigger */
+/* Device buttons */
 .device-btn {
   background: rgba(255, 255, 255, 0.08);
   border: none;
   border-radius: 18px;
-  padding: 22px;
-  width: 220px;      /* was ~160–180 */
-  height: 260px;     /* was ~200–230 */
+  padding: 20px;
+  width: 230px;      /* bigger button */
+  height: 280px;     /* bigger button */
   cursor: pointer;
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -73,18 +71,12 @@ html, body {
   overflow: hidden;
 }
 
-/* Bigger images for both buttons */
+/* BIGGER IMAGES — this is the important part */
 .device-btn img {
-  width: 140px;      /* this is the main size change */
-  height: 140px;
+  width: 170px;      /* actually big now */
+  height: 170px;
   object-fit: contain;
-  margin-bottom: 14px;
-}
-
-/* Make MOBILE image even bigger if you want */
-#mobileBtn img {
-  width: 160px;
-  height: 160px;
+  margin-bottom: 15px;
 }
 
 /* Hover effect */
@@ -96,38 +88,13 @@ html, body {
 /* Mobile scaling */
 @media (max-width: 600px) {
   .device-btn {
-    width: 240px;
-    height: 280px;
+    width: 260px;
+    height: 300px;
   }
 
   .device-btn img {
-    width: 150px;
-    height: 150px;
+    width: 190px;
+    height: 190px;
   }
-
-  #mobileBtn img {
-    width: 170px;
-    height: 170px;
-  }
-}
-
-
-
-/* FORCE DEVICE IMAGES TO BE BIGGER */
-img {
-  max-width: none !important;
-  width: 180px !important;
-  height: auto !important;
-}
-
-/* If your buttons are too small, force them bigger too */
-button, .device-btn, .device-button, .select-btn {
-  width: 240px !important;
-  height: 280px !important;
-  padding: 20px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center !important;
 }
 
