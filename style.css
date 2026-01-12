@@ -11,7 +11,7 @@ html, body {
 }
 
 /* Animated background */
-.animated-bg {
+.background {
   position: fixed;
   top: 0;
   left: 0;
@@ -29,15 +29,15 @@ html, body {
   100% { background-position: 0% 50%; }
 }
 
-/* Device selection layout */
+/* Container layout */
 .device-container {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1;
   text-align: center;
+  z-index: 1;
 }
 
 .device-container h1 {
@@ -45,6 +45,7 @@ html, body {
   margin-bottom: 40px;
 }
 
+/* Button layout */
 .device-buttons {
   display: flex;
   gap: 30px;
@@ -52,29 +53,31 @@ html, body {
   justify-content: center;
 }
 
+/* Device buttons */
 .device-btn {
   background: rgba(255, 255, 255, 0.08);
   border: none;
   border-radius: 15px;
   padding: 20px;
-  width: 160px;
-  height: 200px;
+  width: 180px;
+  height: 220px;
   cursor: pointer;
   color: white;
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   transition: transform 0.2s ease, background 0.2s ease;
+  overflow: hidden;
 }
 
-..device-btn img {
-  max-width: 100px;
-  height: auto;
+.device-btn img {
+  width: 100px;
+  max-height: 100px;
   object-fit: contain;
+  margin-bottom: 10px;
 }
-
 
 .device-btn:hover {
   transform: scale(1.08);
@@ -84,7 +87,12 @@ html, body {
 /* Mobile scaling */
 @media (max-width: 600px) {
   .device-btn {
-    width: 200px;
-    height: 220px;
+    width: 220px;
+    height: 240px;
+  }
+
+  .device-btn img {
+    width: 120px;
+    max-height: 120px;
   }
 }
