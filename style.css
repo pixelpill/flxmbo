@@ -111,3 +111,23 @@ html, body {
   }
 }
 
+
+
+/* FORCE DEVICE IMAGES TO BE BIGGER */
+img {
+  max-width: none !important;
+  width: 180px !important;
+  height: auto !important;
+}
+
+/* If your buttons are too small, force them bigger too */
+button, .device-btn, .device-button, .select-btn {
+  width: 240px !important;
+  height: 280px !important;
+  padding: 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
