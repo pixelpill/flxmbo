@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games</title>
+  <link rel="stylesheet" href="home.css">
+  <script defer src="games.js"></script>
+  <script defer src="home.js"></script>
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <nav class="navbar">
+    <h1 class="logo">Games</h1>
+    <button id="themeBtn">Themes</button>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search games...">
+  </div>
+
+  <div class="categories">
+    <button class="cat-btn" data-category="all">All</button>
+    <button class="cat-btn" data-category="action">Action</button>
+    <button class="cat-btn" data-category="horror">Horror</button>
+    <button class="cat-btn" data-category="racing">Racing</button>
+    <button class="cat-btn" data-category="strategy">Strategy</button>
+  </div>
+
+  <section class="games-grid" id="gamesGrid"></section>
+
+  <!-- Theme Modal -->
+  <div id="themeModal" class="modal">
+    <div class="modal-content">
+      <h2>Select Theme</h2>
+
+      <button class="theme-option" data-theme="default">Default</button>
+      <button class="theme-option" data-theme="neon">Neon</button>
+      <button class="theme-option" data-theme="horror">Horror</button>
+      <button class="theme-option" data-theme="vaporwave">Vaporwave</button>
+
+      <button id="closeTheme">Close</button>
+    </div>
+  </div>
+
+</body>
+</html>
