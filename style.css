@@ -11,7 +11,8 @@ html, body {
 }
 
 /* Animated background */
-.background {
+.animated-bg,
+.background { /* support either class name */
   position: fixed;
   top: 0;
   left: 0;
@@ -29,7 +30,7 @@ html, body {
   100% { background-position: 0% 50%; }
 }
 
-/* Container layout */
+/* Center container */
 .device-container {
   height: 100%;
   display: flex;
@@ -41,58 +42,72 @@ html, body {
 }
 
 .device-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+  font-size: 2.6rem;
+  margin-bottom: 45px;
 }
 
 /* Button layout */
 .device-buttons {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-/* Device buttons */
+/* Device buttons – made bigger */
 .device-btn {
   background: rgba(255, 255, 255, 0.08);
   border: none;
-  border-radius: 15px;
-  padding: 20px;
-  width: 180px;
-  height: 220px;
+  border-radius: 18px;
+  padding: 22px;
+  width: 220px;      /* was ~160–180 */
+  height: 260px;     /* was ~200–230 */
   cursor: pointer;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   transition: transform 0.2s ease, background 0.2s ease;
   overflow: hidden;
 }
 
+/* Bigger images for both buttons */
 .device-btn img {
-  width: 100px;
-  max-height: 100px;
+  width: 140px;      /* this is the main size change */
+  height: 140px;
   object-fit: contain;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
+/* Make MOBILE image even bigger if you want */
+#mobileBtn img {
+  width: 160px;
+  height: 160px;
+}
+
+/* Hover effect */
 .device-btn:hover {
   transform: scale(1.08);
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.18);
 }
 
 /* Mobile scaling */
 @media (max-width: 600px) {
   .device-btn {
-    width: 220px;
-    height: 240px;
+    width: 240px;
+    height: 280px;
   }
 
   .device-btn img {
-    width: 120px;
-    max-height: 120px;
+    width: 150px;
+    height: 150px;
+  }
+
+  #mobileBtn img {
+    width: 170px;
+    height: 170px;
   }
 }
+
