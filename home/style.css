@@ -1,0 +1,134 @@
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0f0f0f;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Animated background */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(270deg, #0f0f0f, #1a1a1a, #222, #111);
+  background-size: 800% 800%;
+  animation: bgShift 20s ease infinite;
+  z-index: -1;
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: rgba(20,20,20,0.6);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  margin: 0;
+}
+
+/* Search */
+.search-container {
+  padding: 20px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+/* Categories */
+.categories {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 20px;
+}
+
+.cat-btn {
+  padding: 10px 15px;
+  background: #222;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Game Grid */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.game-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.15s ease;
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 300px;
+}
+
+/* Themes */
+body.neon {
+  background: radial-gradient(circle, #0ff, #00f);
+}
+
+body.horror {
+  background: radial-gradient(circle, #300, #000);
+}
+
+body.vaporwave {
+  background: linear-gradient(135deg, #ff00ff, #00ffff);
+}
