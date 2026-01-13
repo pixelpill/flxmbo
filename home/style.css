@@ -178,3 +178,12 @@ body.vaporwave {
 }
 
 
+
+/* Keep the Themes button on the right */
+.navbar button {
+  margin-left: auto;
+  position: relative;
+  z-index: 5;
+}
+
+
