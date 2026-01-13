@@ -162,14 +162,19 @@ body.vaporwave {
 
 
 
-/* Center the "Games" title in the navbar */
+/* Force navbar to allow centered title */
+.navbar {
+  position: relative;
+}
+
+/* Center the "Games" title */
 .center-title {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   margin: 0;
   pointer-events: none;
 }
-
 
 
