@@ -1,3 +1,4 @@
+// Your game list
 const games = [
   {
     name: "Drive Mad",
@@ -21,3 +22,31 @@ const games = [
     mobileSupport: true
   }
 ];
+
+// Render all games into the grid
+function renderGames() {
+  const grid = document.getElementById("gamesGrid");
+  const savedDevice = localStorage.getItem("device") || "pc";
+
+  grid.innerHTML = ""; // clear old content
+
+  games.forEach(game => {
+    // Device filtering
+    if (savedDevice === "mobile" && !game.mobileSupport) return;
+
+    const card = document.createElement("div");
+    card.classList.add("game-card");
+    card.dataset.genres = game.category;
+
+    card.innerHTML = `
+      <img src="${game.img}" alt="${game.name}">
+      <h3>${game.name}</h3>
+      <button onclick="window.location.href='${game.link}'">Play</button>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+// Run after DOM loads
+document.addEventListener("DOMContentLoaded", renderGames);
