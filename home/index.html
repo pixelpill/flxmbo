@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta-name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Games</title>
+
+  <!-- Correct CSS path -->
   <link rel="stylesheet" href="style.css">
-  <script defer src="games.js"></script>
+
+  <!-- Load home.js FIRST so it can set up UI -->
   <script defer src="home.js"></script>
+
+  <!-- Load games.js AFTER so it can render games -->
+  <script defer src="games.js"></script>
 </head>
 <body>
 
