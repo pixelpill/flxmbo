@@ -38,11 +38,16 @@ function renderGames() {
     card.classList.add("game-card");
     card.dataset.genres = game.category;
 
+    // Card content (NO play button)
     card.innerHTML = `
-      <img src="${game.img}" alt="${game.name}">
+      <img src="${game.img}" alt="${game.name}" class="game-img">
       <h3>${game.name}</h3>
-      <button onclick="window.location.href='${game.link}'">Play</button>
     `;
+
+    // Make entire card clickable
+    card.addEventListener("click", () => {
+      window.location.href = game.link;
+    });
 
     grid.appendChild(card);
   });
