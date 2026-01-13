@@ -13,4 +13,11 @@ const games = [
     category: "horror",
     mobileSupport: true
   }
+    {
+    name: "Monster Tracks",
+    img: "images/drive-mad.png",
+    link: "SingleFileGames/Monster-Tracks.html",
+    category: "racing",
+    mobileSupport: true
+  },
 ];
