@@ -15,7 +15,7 @@ const games = [
   }
     {
     name: "Monster Tracks",
-    img: "images/drive-mad.png",
+    img: "images/monster-tracks.jpeg",
     link: "SingleFileGames/Monster-Tracks.html",
     category: "racing",
     mobileSupport: true
