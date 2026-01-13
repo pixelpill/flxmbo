@@ -8,9 +8,9 @@ const games = [
     mobileSupport: true
   },
   {
-    name: "FNAF",
-    img: "../images/fnaf.png",
-    link: "../games/fnaf/index.html",
+    name: "Five Nights At Freddy's",
+    img: "../images/FNAF1.jpeg",
+    link: "../SingleFileGames/FNAF.html",
     category: "horror",
     mobileSupport: true
   },
