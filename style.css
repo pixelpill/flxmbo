@@ -10,6 +10,31 @@ html, body {
   overflow: hidden;
 }
 
+/* Top-left logo + site name */
+.site-brand {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.site-brand img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.site-brand span {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
 /* Background animation */
 .background {
   position: fixed;
@@ -58,8 +83,8 @@ html, body {
   border: none;
   border-radius: 18px;
   padding: 20px;
-  width: 230px;      /* bigger button */
-  height: 280px;     /* bigger button */
+  width: 230px;
+  height: 280px;
   cursor: pointer;
   color: white;
   font-size: 1.3rem;
@@ -71,9 +96,9 @@ html, body {
   overflow: hidden;
 }
 
-/* BIGGER IMAGES — this is the important part */
+/* Device images */
 .device-btn img {
-  width: 170px;      /* actually big now */
+  width: 170px;
   height: 170px;
   object-fit: contain;
   margin-bottom: 15px;
@@ -97,4 +122,3 @@ html, body {
     height: 190px;
   }
 }
-
