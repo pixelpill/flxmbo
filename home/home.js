@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   highlightDevice(savedDevice);
   setupGenreButtons();
   setupSearch();
+  setupThemeModal();
+  setupThemeOptions();
 });
 
 // Apply theme to body
@@ -23,20 +25,19 @@ function highlightDevice(device) {
   });
 }
 
-// Genre button logic
+// Genre button logic (FIXED to match your HTML)
 function setupGenreButtons() {
-  const genreButtons = document.querySelectorAll(".genre-btn");
+  const genreButtons = document.querySelectorAll(".cat-btn");
 
   genreButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       genreButtons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
-      const genre = btn.dataset.genre;
+      const genre = btn.dataset.category;
       filterGamesByGenre(genre);
     });
 
-    // Hover animation
     btn.addEventListener("mouseenter", () => btn.classList.add("hover"));
     btn.addEventListener("mouseleave", () => btn.classList.remove("hover"));
   });
@@ -57,14 +58,48 @@ function setupSearch() {
   });
 }
 
-// Filter games by genre
+// Filter games by genre (FIXED to match your array)
 function filterGamesByGenre(genre) {
   const games = document.querySelectorAll(".game-card");
 
   games.forEach(game => {
-    const gameGenres = game.dataset.genres.split(",");
-    game.style.display = genre === "all" || gameGenres.includes(genre)
+    const gameGenre = game.dataset.genres;
+    game.style.display = genre === "all" || gameGenre === genre
       ? "block"
       : "none";
+  });
+}
+
+// THEME MODAL LOGIC (NEW)
+function setupThemeModal() {
+  const themeBtn = document.getElementById("themeBtn");
+  const themeModal = document.getElementById("themeModal");
+  const closeTheme = document.getElementById("closeTheme");
+
+  themeBtn.addEventListener("click", () => {
+    themeModal.style.display = "block";
+  });
+
+  closeTheme.addEventListener("click", () => {
+    themeModal.style.display = "none";
+  });
+
+  // Close when clicking outside modal
+  window.addEventListener("click", (e) => {
+    if (e.target === themeModal) {
+      themeModal.style.display = "none";
+    }
+  });
+}
+
+// THEME OPTION BUTTONS (NEW)
+function setupThemeOptions() {
+  const themeButtons = document.querySelectorAll(".theme-option");
+
+  themeButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const theme = btn.dataset.theme;
+      applyTheme(theme);
+    });
   });
 }
