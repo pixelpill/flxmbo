@@ -214,3 +214,61 @@ body.vaporwave {
   letter-spacing: 2px;
 }
 
+
+
+
+
+
+
+
+.theme-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.theme-big-btn {
+  padding: 20px;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.theme-big-btn:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.18);
+}
+
+
+
+
+
+
+
+
+.back-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+
