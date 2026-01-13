@@ -17,19 +17,19 @@ html, body {
   left: 15px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   z-index: 9999;
 }
 
 .site-brand img {
-  width: 65px;      /* bigger logo */
-  height: 65px;
+  width: 100px;      /* VERY BIG NOW */
+  height: 100px;
   object-fit: contain;
   background: none;
 }
 
 .site-brand span {
-  font-size: 28px;  /* bigger text */
+  font-size: 32px;   /* bigger text to match */
   font-weight: 700;
   color: white;
   letter-spacing: 1px;
@@ -124,11 +124,12 @@ html, body {
   }
 
   .site-brand img {
-    width: 55px;   /* slightly smaller on mobile */
-    height: 55px;
+    width: 80px;   /* still large on mobile */
+    height: 80px;
   }
 
   .site-brand span {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
+
