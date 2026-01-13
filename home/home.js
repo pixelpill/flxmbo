@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   highlightDevice(savedDevice);
   setupGenreButtons();
   setupSearch();
-  setupThemeModal();
-  setupThemeOptions();
+
+  // ⭐ NEW FULLSCREEN THEME PAGE SETUP ⭐
+  setupThemePage();
 });
 
 // Apply theme to body
@@ -70,33 +71,24 @@ function filterGamesByGenre(genre) {
   });
 }
 
-// THEME MODAL LOGIC (NEW)
-function setupThemeModal() {
+// ⭐⭐⭐ FULLSCREEN THEME PAGE LOGIC (REPLACES OLD MODAL) ⭐⭐⭐
+function setupThemePage() {
+  const themePage = document.getElementById("themePage");
   const themeBtn = document.getElementById("themeBtn");
-  const themeModal = document.getElementById("themeModal");
-  const closeTheme = document.getElementById("closeTheme");
+  const backBtn = document.getElementById("backBtn");
 
+  // Open fullscreen theme page
   themeBtn.addEventListener("click", () => {
-    themeModal.style.display = "block";
+    themePage.style.display = "flex";
   });
 
-  closeTheme.addEventListener("click", () => {
-    themeModal.style.display = "none";
+  // Close fullscreen theme page
+  backBtn.addEventListener("click", () => {
+    themePage.style.display = "none";
   });
 
-  // Close when clicking outside modal
-  window.addEventListener("click", (e) => {
-    if (e.target === themeModal) {
-      themeModal.style.display = "none";
-    }
-  });
-}
-
-// THEME OPTION BUTTONS (NEW)
-function setupThemeOptions() {
-  const themeButtons = document.querySelectorAll(".theme-option");
-
-  themeButtons.forEach(btn => {
+  // Apply theme when clicking big buttons
+  document.querySelectorAll(".theme-big-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       const theme = btn.dataset.theme;
       applyTheme(theme);
