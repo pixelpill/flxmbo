@@ -26,7 +26,7 @@ function highlightDevice(device) {
   });
 }
 
-// Genre button logic (FIXED to match your HTML)
+// Genre button logic
 function setupGenreButtons() {
   const genreButtons = document.querySelectorAll(".cat-btn");
 
@@ -59,7 +59,7 @@ function setupSearch() {
   });
 }
 
-// Filter games by genre (FIXED to match your array)
+// Filter games by genre
 function filterGamesByGenre(genre) {
   const games = document.querySelectorAll(".game-card");
 
@@ -71,7 +71,7 @@ function filterGamesByGenre(genre) {
   });
 }
 
-// ⭐⭐⭐ FULLSCREEN THEME PAGE LOGIC (REPLACES OLD MODAL) ⭐⭐⭐
+// ⭐⭐⭐ FULLSCREEN THEME PAGE LOGIC ⭐⭐⭐
 function setupThemePage() {
   const themePage = document.getElementById("themePage");
   const themeBtn = document.getElementById("themeBtn");
