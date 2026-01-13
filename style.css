@@ -1,3 +1,15 @@
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: white;
+  overflow: hidden;
+}
+
 /* Top-left logo + site name */
 .site-brand {
   position: fixed;
@@ -10,10 +22,10 @@
 }
 
 .site-brand img {
-  width: 70px;      /* bigger */
-  height: 70px;
+  width: 65px;      /* bigger logo */
+  height: 65px;
   object-fit: contain;
-  background: none; /* ensures no background */
+  background: none;
 }
 
 .site-brand span {
@@ -22,4 +34,101 @@
   color: white;
   letter-spacing: 1px;
   text-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+
+/* Background animation */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(270deg, #0f0f0f, #1a1a1a, #222, #111);
+  background-size: 800% 800%;
+  animation: bgShift 20s ease infinite;
+  z-index: -1;
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Center content */
+.device-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.device-container h1 {
+  font-size: 2.6rem;
+  margin-bottom: 40px;
+}
+
+/* Button layout */
+.device-buttons {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Device buttons */
+.device-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 18px;
+  padding: 20px;
+  width: 230px;
+  height: 280px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+  overflow: hidden;
+}
+
+/* Device images */
+.device-btn img {
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Hover effect */
+.device-btn:hover {
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* Mobile scaling */
+@media (max-width: 600px) {
+  .device-btn {
+    width: 260px;
+    height: 300px;
+  }
+
+  .device-btn img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .site-brand img {
+    width: 55px;   /* slightly smaller on mobile */
+    height: 55px;
+  }
+
+  .site-brand span {
+    font-size: 24px;
+  }
 }
