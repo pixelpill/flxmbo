@@ -8,7 +8,7 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
-/* Top-left logo + site name */
+/* Top-left logo + site name (MATCHES DEVICE SELECTION SIZE) */
 .site-brand {
   position: fixed;
   top: 15px;
@@ -20,14 +20,14 @@ html, body {
 }
 
 .site-brand img {
-  width: 70px;      /* bigger logo */
-  height: 70px;
+  width: 65px;      /* SAME SIZE AS DEVICE SELECTION */
+  height: 65px;
   object-fit: contain;
   background: none;
 }
 
 .site-brand span {
-  font-size: 28px;  /* bigger text */
+  font-size: 28px;  /* SAME TEXT SIZE AS DEVICE SELECTION */
   font-weight: 700;
   color: white;
   letter-spacing: 1px;
