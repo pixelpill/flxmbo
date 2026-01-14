@@ -10,32 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setupThemePage(); // REQUIRED
 });
 
-function setupThemePage() {
-  const themePage = document.getElementById("themePage");
-  const themeBtn = document.getElementById("themeBtn");
-  const backBtn = document.getElementById("backBtn");
-
-  themeBtn.addEventListener("click", () => {
-    themePage.style.display = "flex";
-  });
-
-  backBtn.addEventListener("click", () => {
-    themePage.style.display = "none";
-  });
-
-  document.querySelectorAll(".theme-big-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const theme = btn.dataset.theme;
-      applyTheme(theme);
-    });
-  });
-}
-
-
-  // ⭐ NEW FULLSCREEN THEME PAGE SETUP ⭐
-  setupThemePage();
-});
-
 // Apply theme to body
 function applyTheme(theme) {
   document.body.setAttribute("data-theme", theme);
