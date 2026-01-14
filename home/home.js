@@ -7,8 +7,30 @@ document.addEventListener("DOMContentLoaded", () => {
   highlightDevice(savedDevice);
   setupGenreButtons();
   setupSearch();
-  setupThemePage(); // ⭐ THIS LINE IS REQUIRED
+  setupThemePage(); // REQUIRED
 });
+
+function setupThemePage() {
+  const themePage = document.getElementById("themePage");
+  const themeBtn = document.getElementById("themeBtn");
+  const backBtn = document.getElementById("backBtn");
+
+  themeBtn.addEventListener("click", () => {
+    themePage.style.display = "flex";
+  });
+
+  backBtn.addEventListener("click", () => {
+    themePage.style.display = "none";
+  });
+
+  document.querySelectorAll(".theme-big-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const theme = btn.dataset.theme;
+      applyTheme(theme);
+    });
+  });
+}
+
 
   // ⭐ NEW FULLSCREEN THEME PAGE SETUP ⭐
   setupThemePage();
