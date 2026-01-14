@@ -2,7 +2,7 @@
 const games = [
   {
     name: "Drive Mad",
-    img: "../images/Drivemad.jpeg",
+    img: "../images/Drive-Mad.jpeg",
     link: "../SingleFileGames/Drive-Mad.html",
     category: "racing",
     mobileSupport: true
