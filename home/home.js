@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   highlightDevice(savedDevice);
   setupGenreButtons();
   setupSearch();
+  setupThemePage(); // ⭐ THIS LINE IS REQUIRED
+});
 
   // ⭐ NEW FULLSCREEN THEME PAGE SETUP ⭐
   setupThemePage();
