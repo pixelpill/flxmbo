@@ -146,11 +146,7 @@ html, body {
   max-width: 300px;
 }
 
-/* Themes */
-body[data-theme="onyx"] {
-  background-color: #353839; 
-  color: white;
-}
+
 
 
 
@@ -264,3 +260,8 @@ body[data-theme="onyx"] {
 }
 
 
+/* Themes */
+body[data-theme="onyx"] {
+  background-color: #353839; 
+  color: white;
+}
