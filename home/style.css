@@ -147,18 +147,10 @@ html, body {
 }
 
 /* Themes */
-body.neon {
-  background: radial-gradient(circle, #0ff, #00f);
+body[data-theme="onyx"] {
+  background-color: #353839; 
+  color: white;
 }
-
-body.horror {
-  background: radial-gradient(circle, #300, #000);
-}
-
-body.vaporwave {
-  background: linear-gradient(135deg, #ff00ff, #00ffff);
-}
-
 
 
 
