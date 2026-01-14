@@ -3,9 +3,19 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Default theme */
+body[data-theme="default"] {
   background: #0f0f0f;
   color: white;
-  font-family: Arial, sans-serif;
+}
+
+/* Onyx theme */
+body[data-theme="onyx"] {
+  background-color: #353839;
+  color: white;
 }
 
 /* Top-left logo + site name (MATCHES DEVICE SELECTION SIZE) */
@@ -20,14 +30,14 @@ html, body {
 }
 
 .site-brand img {
-  width: 65px;      /* SAME SIZE AS DEVICE SELECTION */
+  width: 65px;
   height: 65px;
   object-fit: contain;
   background: none;
 }
 
 .site-brand span {
-  font-size: 28px;  /* SAME TEXT SIZE AS DEVICE SELECTION */
+  font-size: 28px;
   font-weight: 700;
   color: white;
   letter-spacing: 1px;
@@ -146,10 +156,6 @@ html, body {
   max-width: 300px;
 }
 
-
-
-
-
 /* Force navbar to allow centered title */
 .navbar {
   position: relative;
@@ -165,8 +171,6 @@ html, body {
   pointer-events: none;
 }
 
-
-
 /* Keep the Themes button on the right */
 .navbar button {
   margin-left: auto;
@@ -174,8 +178,7 @@ html, body {
   z-index: 5;
 }
 
-
-
+/* Fullscreen Theme Page */
 .theme-page {
   position: fixed;
   top: 0;
@@ -202,13 +205,6 @@ html, body {
   letter-spacing: 2px;
 }
 
-
-
-
-
-
-
-
 .theme-buttons {
   display: flex;
   flex-direction: column;
@@ -234,13 +230,6 @@ html, body {
   background: rgba(255,255,255,0.18);
 }
 
-
-
-
-
-
-
-
 .back-btn {
   position: fixed;
   bottom: 20px;
@@ -257,11 +246,4 @@ html, body {
 
 .back-btn:hover {
   background: rgba(255,255,255,0.2);
-}
-
-
-/* Themes */
-body[data-theme="onyx"] {
-  background-color: #353839; 
-  color: white;
 }
