@@ -20,7 +20,18 @@ const games = [
     link: "../SingleFileGames/Monster-Tracks.html",
     category: "racing",
     mobileSupport: true
-  }
+  },
+
+
+  
+  {
+    name: "Bloons",
+    img: "../images/Bloons.jpeg",
+    link: "../SingleFileGames/Bloons.html",
+    category: "strategy",
+    mobileSupport: true
+  },
+  
 ];
 
 // Render all games into the grid
