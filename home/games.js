@@ -31,6 +31,20 @@ const games = [
     category: "strategy",
     mobileSupport: true
   },
+
+
+  
+
+
+  
+  {
+    name: "Stickman Hook",
+    img: "../images/Stickman-Hook.jpeg",
+    link: "../SingleFileGames/Stickman-Hook.html",
+    category: "strategy",
+    mobileSupport: true
+  },
+
   
 ];
 
