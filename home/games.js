@@ -33,8 +33,7 @@ const games = [
   },
 
 
-  true
-  },
+
 
 
   
