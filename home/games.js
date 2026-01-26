@@ -47,6 +47,16 @@ const games = [
 
 
   
+  {
+    name: "Bloons TD 2",
+    img: "../images/BloonsTD2.jpeg",
+    link: "../SingleFileGames/BloonsTD2.html",
+    category: "strategy",
+    mobileSupport: true
+  },
+
+
+  
 
 
   
