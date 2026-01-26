@@ -33,6 +33,20 @@ const games = [
   },
 
 
+  true
+  },
+
+
+  
+  {
+    name: "Bloons 2",
+    img: "../images/Bloons2.jpeg",
+    link: "../SingleFileGames/Bloons2.html",
+    category: "strategy",
+    mobileSupport: true
+  },
+
+
   
 
 
